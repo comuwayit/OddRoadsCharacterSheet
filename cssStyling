@@ -1,0 +1,100 @@
+/* Set the min-width so that when the window is resized the look will stay consistant */
+
+.charsheet {
+	background-color: #ddd;
+	min-width: 800px;
+}
+
+/* Universal styling applied to all elements of these types */
+
+h2 {
+	font-size: 1em;
+	margin-bottom: 8px;
+	text-align: left;
+}
+
+label {
+    display: inline;
+}
+
+input {
+    display: inline;
+	width: 165px;
+}
+
+img {
+	max-height: 100px;
+}
+
+.trak {
+    display: inline;
+}
+
+.heartsclass input{
+    vertical-align:top;
+    display:inline-block;
+}
+
+.desc {
+    display:block;   
+}
+
+.textAreaColumn{
+    width:100%;    
+}
+.textAreaColumn div{
+    float:left;
+    width:50%;
+    padding:10px;
+    box-sizing: border-box;
+}
+
+.textAreaColumn div span{
+    display:block;
+}
+
+.textAreaColumn div textarea{
+    box-sizing: border-box;
+    width:100%
+}
+
+/* Targetted styling that only effects elements with these classes */
+input.sheet-desc {
+    width:600px;
+}
+
+input.sheet-short {
+	width: 20px;
+}
+
+select.sheet-dtype {
+    vertical-align: top;
+    width: 60px;
+}
+span.sheet-dee {
+	font-size: 1.4em;
+	font-weight: bold;
+	left: -36%;
+	padding-right: 4px;
+	placement; relative;
+	top: 3px;
+}
+
+/* Targetted styling that only effects elements contained within the stated class */
+.sheet-stats h3 {
+	display: inline-block;
+	text-align: left;
+}
+
+.sheet-stats h3:first-child {
+	margin-left: 35%;
+	margin-right: 15%;
+}
+
+.sheet-stats input {
+	margin-right: 8%;
+	width: 17%;
+}
+
+/* heart button styling */
+
