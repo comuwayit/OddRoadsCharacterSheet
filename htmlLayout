@@ -77,7 +77,156 @@
 			<option value="12">d12</option>
 			<option value="12+1">d12+1</option>
 			<option value="12+2">d12+2</option>
-		</select>
+		</select><!DOCTYPE html>
+<html>
+
+	<a href="https://imgbb.com/"><img src="https://i.ibb.co/RjwyBPH/Odd-Roads-penumbra.png" alt="Odd-Roads-penumbra" border="0"></a>
+	
+	<div class= "sheet-2colrow">
+		<div class="sheet-col">
+			<label>Name:</label>
+			<input type="text" name="attr_charactername" />
+		</div>
+		
+		<div class="sheet-col">
+			<label>Job Points:</label>
+			<input type="number" name="attr_xp" />
+			<label>Tokens:</label>
+			<input min="0" max="3" type="number" name="attr_tokens" />
+		</div>
+		
+	</div>
+	<div class ="sheet-row">
+		<h2>Traits:</h2>
+		<input type="text" class="sheet-desc" name="attr_traits">
+		<h2>Beliefs:</h2>
+		<input type="text" class="sheet-desc" name="attr_beliefs">
+		<h2>Instincts:</h2>
+		<input type="text" class="sheet-desc" name="attr_instinct">
+	</div>
+	<hr/>
+
+	<h2>Hearts/partials</h2>
+	<div class="heartsclass">
+		<label for="attr_hp">current</label>
+		<input type='number' name="attr_hp"/>
+		<label for="attr_hp_max">max</label>
+		<input type='number' name="attr_hp_max" />
+	</div>
+	<br />
+
+	<div class="3colrow">
+		<div class="col">
+			<h1>Attributes</h1>
+			
+			<label>Strength </label><span class='dee'>d</span><select name='attr_strength' class='dtype' value="4!" style='width:55px;'>
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="12">d12</option>
+				<option value="12+1">d12+1</option>
+				<option value="12+2">d12+2</option>
+			</select>
+			<button type='roll' name='roll_Strength' value='&{attr_strength:value} {{name=@{charactername}}} {{result=[[1d@{strength}]]}}'></button>
+			<br />
+			<label>Dexterity </label><span class='dee'>d</span><select name='attr_agility' class='dtype' value="4!" style='width:55px;'>
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="12">d12</option>
+				<option value="12+1">d12+1</option>
+				<option value="12+2">d12+2</option>
+			</select>
+			<button type='roll' name='roll_testattack' value='&{attr_agility:value} {{name=@{charactername}}} {{result=[[1d@{agility}]]}}'></button>
+			<br />
+			<label>sense </label><span class='dee'>d</span><select name='attr_sense' class='dtype' value="4!" style='width:55px;'>
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="12">d12</option>
+				<option value="12+1">d12+1</option>
+				<option value="12+2">d12+2</option>
+			</select>
+			<button type='roll' name='roll_testattack' value='&{attr_sense:value} {{name=@{charactername}}} {{result=[[1d@{sense}]]}}'></button>
+			<br />
+			<label>charisma</label><span class='dee'>d</span><select name='attr_charisma' class='dtype' value="4!" style='width:55px;'>
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="12">d12</option>
+				<option value="12+1">d12+1</option>
+				<option value="12+2">d12+2</option>
+			</select>
+			<button type='roll' name='roll_testattack' value='&{attr_charisma:value} {{name=@{charactername}}} {{result=[[1d@{charisma}]]}}'></button>
+			<br />
+			<label>Logic </label><span class='dee'>d</span><select name='attr_smarts' class='dtype' value="4!" style='width:55px;'>
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="12">d12</option>
+				<option value="12+1">d12+1</option>
+				<option value="12+2">d12+2</option>
+			</select>
+			<button type='roll' name='roll_testattack' value='&{attr_smarts:value} {{name=@{charactername}}} {{result=[[1d@{smarts}]]}}'></button>
+			<br />
+			<label>Willpower </label><span class='dee'>d</span><select name='attr_willpower' class='dtype' value="4!" style='width:55px;'>
+				<option value="4">d4</option>
+				<option value="6">d6</option>
+				<option value="8">d8</option>
+				<option value="10">d10</option>
+				<option value="12">d12</option>
+				<option value="12+1">d12+1</option>
+				<option value="12+2">d12+2</option>
+			</select>
+			<button type='roll' name='roll_testattack' value='&{attr_willpower:value} {{name=@{charactername}}} {{result=[[1d@{willpower}]]}}'></button>
+			<br />
+			<hr />
+	</div>
+
+
+		<h3>Skills</h3>
+		<fieldset class="repeating_skills">
+					<input type="text" style='width:155px;' name="attr_skillname">
+					<select name="attr_ability1" class='dtype' value="4!" style='width:65px;'>
+						<option value="@{strength}">STR</option>
+						<option value="@{agility}">AGL</option>
+						<option value="@{sense}">SEN</option>
+						<option value="@{smarts}">SMT</option>
+						<option value="@{charisma}">CHR</option>
+						<option value="@{willpower}">WIL</option>
+					</select>
+					<select name="attr_ability2" class='dtype' value="4!" style='width:65px;'>
+						<option value="@{strength}">STR</option>
+						<option value="@{agility}">AGL</option>
+						<option value="@{sense}">SEN</option>
+						<option value="@{smarts}">SMT</option>
+						<option value="@{charisma}">CHR</option>
+						<option value="@{willpower}">WIL</option>
+					</select>
+					<button type="roll" value="/em tries to use @{skillname} [[{1d@{ability1},1d@{ability2}}kh1]]" name="@{skillname} roll" ></button>
+					<br />
+		</fieldset>
+
+
+	<div class="textAreaColumn">
+	   
+		<div>
+			<span>Inventory</span>
+			<textarea name="attr_inventory">Content goes here</textarea>
+		</div>
+	</div>
+	<div class="weapArea">
+		<div>
+			<span>Weapon</span>
+			<input name="attr_weapon" type="text" class="sheet-desc">
+		</div>
+	</div>
+</html>
         <button type='roll' name='roll_testattack' value='&{attr_charisma:value} {{name=@{charactername}}} {{result=[[1d@{charisma}]]}}'></button>
 		<br />
 		<label>Logic </label><span class='dee'>d</span><select name='attr_smarts' class='dtype' value="4!" style='width:55px;'>
